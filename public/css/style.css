@@ -1,0 +1,577 @@
+#banner{
+    width: 100% !important;
+    height: 100vh;
+    background: linear-gradient(to top,  rgb(5, 3, 75), rgb(0, 0, 27)),  rgb(0, 0, 70) ;; 
+    position: absolute !important;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white !important;
+   
+
+}
+
+#switch{
+    position: relative;
+    top: 0.5rem !important;
+
+}
+
+#switch label:hover{
+    text-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6, 0 0 30px #00e6e6, 0 0 40px #00e6e6, 0 0 50px #00e6e6;
+
+}
+
+
+body {
+    transition: background-color ease-out .5s !important;
+}
+
+body.dark-mode{
+    transition: background-color ease-out .5s !important;
+    background: linear-gradient(to left,  rgb(5, 3, 75), rgb(0, 0, 27)),  rgb(0, 0, 70);
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    #mode::after{
+        content: "Dark";
+    }
+
+    
+  .reviewer{
+    color: white;
+   }
+
+
+}
+
+body.light-mode {
+    transition: background-color ease-out .5s !important;
+    background: linear-gradient(to left, rgb(255, 255, 255), rgb(238, 238, 238));
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh !important;
+    nav{
+        width: 100% !important;
+        background: linear-gradient(to left, rgb(255, 255, 255), rgb(238, 238, 238));
+    }
+    .add , .edit, .btn, .ed , .delete{
+        background: linear-gradient(to left, rgb(249, 89, 89), rgb(248, 32, 32));
+        /* color: black !important; */
+    }
+
+    h1{
+        color: black !important;
+    }
+    li{
+        color: black !important;
+    }
+
+    p{
+        color: black !important;
+    }
+    .show p{
+        color: rgb(0, 0, 0) !important;
+    }
+
+    .nav-link{
+        color: rgb(0, 0, 0);
+    }
+
+    
+
+    .foot-info{
+        background: linear-gradient(to right,  rgb(247, 176, 176), rgb(248, 196, 196)),  rgb(251, 155, 155);
+    }
+
+    input{
+        color: black !important;
+    }
+    label{
+        color: black !important;
+    }
+
+    i{
+        color: black !important;
+    }
+
+    h4{
+        color: black !important;
+    }
+    #banner{
+        background: linear-gradient(to top, rgb(255, 255, 255), rgb(251, 197, 197));
+    }
+
+
+    #mode::after{
+        content: "Light";
+    }
+
+    #mode:hover{
+        text-shadow: 0 0 10px #f88c8c, 0 0 20px #f89b9b, 0 0 30px #fb8787, 0 0 40px #fb9696, 0 0 50px #f79c9c;
+        color: rgb(44, 1, 1) !important;
+    }
+    .logina:hover{
+        text-shadow: 0 0 10px #f88c8c, 0 0 20px #f89b9b, 0 0 30px #fb8787, 0 0 40px #fb9696, 0 0 50px #f79c9c;
+        color: rgb(44, 1, 1) !important;
+    }
+
+    .show p:hover{
+        text-shadow: 0 0 10px #fda1a1, 0 0 20px #fa8e8e;
+        color: rgb(30, 1, 1) !important;
+    }
+
+    #revborder{
+        border: 2px solid black;
+        border-radius: 0.5rem;
+    }
+
+    .reviewer{
+        color: black;
+    }
+    .filter:hover{
+        text-shadow: 0 0 10px #fda1a1, 0 0 20px #fa8e8e;
+        color: rgb(30, 1, 1) !important;
+        cursor: pointer;
+      }
+    
+      .filter p{
+        font-size: 0.97rem;
+        color: rgb(0, 0, 0) !important;
+      }
+
+      .tax-toggle{
+        border: 1px solid rgb(0, 0, 0);
+    }
+    .mag{
+        color: white !important;
+    }
+
+    .rolling-text {
+        overflow: hidden;
+        display: inline-block;
+        height: 1.9rem !important;
+        line-height: 1.4rem;
+        text-decoration: none;
+        color: rgb(0, 0, 0) !important;
+    
+    }
+    .rolling-text .block:last-child {
+        padding-top: 0.45rem;
+        color: rgb(0, 0, 0) !important;
+    }
+
+    .where{
+        color: rgb(0, 0, 0);
+    }
+    .private p{
+        color: rgb(0, 0, 0);
+    }
+}
+
+
+#mode{
+    cursor: pointer;
+}
+
+
+
+.container-fluid{
+    flex: 1;
+}
+h1{
+   color: white !important;
+    font-family: "Playwrite NG Modern", cursive;
+    margin-bottom: 1rem !important;
+    margin-top: 1rem !important;
+    margin-left: 2vw !important;
+}
+
+h2{
+    font-family: "Playwrite NG Modern", cursive;
+    font-size:3rem !important;
+
+
+}
+
+h3{
+    font-family: "Playwrite NG Modern", cursive;
+}
+
+.navbar{
+    /* margin-top: 0.5rem !important; */
+    background: linear-gradient(to left,  rgb(5, 3, 75), rgb(0, 0, 27)),  rgb(0, 0, 70);
+    /* background-color: rgb(246, 59, 59) !important; */
+}
+
+
+
+.navbar-nav .nav-link{
+    color: rgb(252, 251, 251);
+    font-weight: 500;
+    font-size: medium;
+}
+.logina:hover{
+    text-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6, 0 0 30px #00e6e6, 0 0 40px #00e6e6, 0 0 50px #00e6e6;
+    color: rgb(255, 255, 255) !important;
+}
+
+.fa-compass{
+    font-size: 2rem;
+}
+
+.foot-info{
+    height: 9rem;
+    background: linear-gradient(to right,  rgb(0, 0, 0), rgb(0, 0, 27)),  rgb(0, 0, 70);
+}
+
+.foot-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+
+}
+.foot-icon i{
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+
+.private{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+
+}
+
+.private p{
+    color: white;
+}
+
+
+.privacy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+.privacy a:hover{
+    text-decoration: underline;
+}
+
+.privacy a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+.card{
+    background-color:transparent !important;
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+
+.card-img-top{
+    width: 100%;
+    border-radius: 1rem !important;
+    object-fit: cover;
+
+}
+
+.card-body{
+    padding: 0rem !important;
+}
+
+.card-body p{
+    font-weight: 500;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.card-link{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+.btn{
+    height: 2.8rem !important;
+    border-radius: 2rem !important;
+    width: 8.2rem !important;
+    background: linear-gradient(to left,  rgb(7, 0, 36), rgb(4, 0, 22), rgb(0, 0, 0));
+    color: white !important;
+    
+
+}
+
+.card-text {
+    color: white;
+}
+
+ ul{
+    color: white;
+}
+
+
+.show{
+
+    position: relative;
+    bottom: 0.5rem !important;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    /* background-color: green; */
+}
+
+.show p{
+    color: white !important;
+}
+
+.show p:hover{
+    text-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6;
+    color: rgb(255, 255, 255) !important;
+}
+
+.add{
+    background: linear-gradient(to left,  rgb(7, 0, 36), rgb(4, 0, 22), rgb(0, 0, 0));
+    border-radius: 1rem !important;
+    border: none !important;
+    color: white;
+    width: 5rem !important;
+    height: 2rem !important;
+}
+
+.edit{
+    width: 7rem !important;
+    height: 2.5rem !important;
+    background: linear-gradient(to left,  rgb(7, 0, 36), rgb(4, 0, 22), rgb(0, 0, 0));
+    border-radius: 1rem !important;
+    border: none !important;
+    color: white;
+}
+
+label{
+    color: white;
+}
+
+.show-img{
+    height: 33vh;
+}
+
+.delete{
+    width: 8rem !important;
+    height: 2.5rem !important;
+    background: linear-gradient(to left,  rgb(7, 0, 36), rgb(4, 0, 22), rgb(0, 0, 0));
+    border-radius: 1rem !important;
+    border: none !important;
+    color: white;
+}
+
+.ed{
+    line-height: 2rem !important;
+    width: 7rem !important;
+    height: 2.5rem !important;
+    background: linear-gradient(to left,  rgb(7, 0, 36), rgb(4, 0, 22), rgb(0, 0, 0));
+    border-radius: 1rem !important;
+    border: none !important;
+}
+
+.ed a{
+    text-decoration: none !important;
+    color: white;
+
+
+}
+
+
+.carousel-item {
+    display: flex;
+    position: relative;
+    /* margin-top: 0.5rem; */
+    height: 29rem !important;
+
+}
+
+
+
+#hover-video {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-item img {
+    object-fit: cover; /* Adjusts the image to cover the height */
+    height: 100%; /* Makes image height fill the carousel */
+    border-radius: 1rem !important;
+
+}
+
+.review-body{
+    padding: 1rem !important;
+}
+
+
+#search{
+    /* width: 15em !important; */
+    border-radius: 0.9rem !important;
+    margin-top: 0.5rem !important;
+    height: 2rem !important;
+}
+
+
+.d-flex{
+    display: block !important;
+}
+
+
+
+.modal-title{
+    color: black !important;
+}
+
+
+#revborder{
+    border: 2px solid white;
+    border-radius: 0.5rem;
+}
+
+
+#filters{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .filter{
+    text-align: center;
+    margin-right: 2.3rem;
+  }
+  .filter:hover{
+    text-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6;
+    color: rgb(255, 255, 255) !important;
+    cursor: pointer;
+  }
+
+  .filter p{
+    font-size: 0.97rem;
+    color: white !important;
+  }
+
+.filter i{
+    color: white !important;
+}
+
+
+
+.tax-toggle{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255);
+    height: 3.25rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-left: 2rem;
+}
+
+.search{
+padding: 2rem 1rem 2rem 1rem;
+border-radius: 5rem !important;
+}
+
+.sb{
+    width: 10rem !important;
+}
+
+.tax-info{
+    display: none;
+}
+
+
+.mag{
+    color: white !important;
+}
+
+#map{
+    height: 33vh;
+    border-radius: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.navbar-collapse{
+    display: block ;
+}
+
+
+
+    .swiper.filter-slider {
+        width: 100%;
+      }
+      
+      .swiper-slide {
+        width: 4rem;
+        font-size: 0.97rem;
+      }
+      
+      
+      .swiper-container {
+        padding-top: 1rem;    
+      }
+    
+      .swiper-wrapper {
+        margin-bottom: 0.5rem;
+        height: 5rem;
+        width: 150rem;
+        display: flex !important;
+      }
+
+      
+  
+  
+    .rolling-text {
+	overflow: hidden;
+	display: inline-block;
+	height: 1.8rem !important;
+	line-height: 1.45rem;
+	text-decoration: none;
+    color: rgb(255, 255, 255) !important;
+
+}
+
+.rolling-text .block:last-child {
+    padding-top: 0.45rem;
+	color: rgb(255, 255, 255) !important;
+}
+
+.rolling-text:hover .letter {
+	transform: translateY(-133%);
+}
+
+.rolling-text .letter {
+	display: inline-block;
+	transition: transform .6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+
+.where{
+    color: white;
+}

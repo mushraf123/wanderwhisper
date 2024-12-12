@@ -1,0 +1,188 @@
+
+<% layout("./layouts/boilerplate") -%>
+
+<div class="row row-cols-lg-12 m-sm-3">
+  <div class="swiper filter-slider swiper-container">
+    <div id="filters" class="swiper-wrapper">
+      <div class="filter item swiper-slide">
+        <div><i class="fa-solid fa-fire"></i></div>
+        <p>Trending</p>
+      </div>
+      <div class="filter item swiper-slide">
+        <div><i class="fa-solid fa-mountain"></i></div>
+        <p>Mountain</p>
+      </div>
+      <div class="filter item swiper-slide">
+        <div><i class="fa-solid fa-person-swimming"></i></div>
+        <p>Arctic</p>
+      </div>
+      <div class="filter item swiper-slide">
+        <div><i class="fa-brands fa-fort-awesome"></i></div>
+        <p>Castle</p>
+      </div>
+      <div class="filter item swiper-slide">
+        <div><i class="fa-solid fa-bed"></i></div>
+        <p>Room</p>
+      </div>
+      <div class="filter item swiper-slide">
+        <div><i class="fa-solid fa-mountain-city"></i></div>
+        <p>Iconic City</p>
+      </div>
+      <div class="filter item swiper-slide">
+        <div><i class="fa-solid fa-mountain-sun"></i></div>
+        <p>Sunset</p>
+      </div>
+      <div class="filter item swiper-slide">
+        <div><i class="fa-solid fa-tree"></i></div>
+        <p>Greens</p>
+      </div>
+      <div class="filter item swiper-slide">
+        <div><i class="fa-solid fa-cow"></i></div>
+        <p>Farms</p>
+      </div>
+      <div class="filter item swiper-slide">
+        <div><i class="fa-solid fa-sailboat"></i></div>
+        <p>Boats</p>
+      </div>
+      <div class="filter item swiper-slide">
+        <div><i class="fa-regular fa-snowflake"></i></div>
+        <p>Snow</p>
+      </div>
+      <div class="filter item swiper-slide">
+        <div><i class="fa-solid fa-feather"></i></div>
+        <p>Feather</p>
+      </div>
+      <div class="filter item swiper-slide">
+        <div><i class="fa-solid fa-wind"></i></div>
+        <p>Wind</p>
+      </div>
+      <div class="tax-toggle">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="Displaytax">
+          <label class="form-check-label" for="Displaytax">Display total after taxes</label>
+        </div>
+      </div>
+      </div>
+    </div>
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner ">
+      <a href="/listings/6759cdb214bfc105f9243a98">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="https://images.unsplash.com/photo-1548439935-9e1390d83250?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="slider img">
+        <div class="carousel-caption">
+          <h2>Modern loft in Downtown</h2>
+          <h6>Find your paradise.</h6>
+        </div>
+      </div>
+    </a>
+    <a href="/listings/6759da50166df1023cfca253">
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="https://images.unsplash.com/photo-1557496866-e27ec3a7e4ef?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 slider-img" alt="slider-img">
+        <div class="carousel-caption ">
+          <h2>Mountain Retreat</h2>
+          <h6>Wander often, wonder always.</h6>
+        </div>
+      </div>
+    </a>
+    <a href="/listings/6759daa6166df1023cfca259">
+      <div class="carousel-item" data-bs-interval="3000">
+        <img  src="https://images.unsplash.com/photo-1442953827601-b6dea5af04c4?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 slider-img" alt="slider-img">
+        <div class="carousel-caption ">
+          <h2>Historic Villa in Tascany</h2>
+          <h6>Travel far, travel wide.</h6>
+        </div>
+      </div>
+    </a>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<h1>All Listings</h1>
+    <div class="row row-cols-lg-4  row-cols-md-3 row-cols-sm-3 row-cols-xsm-3">
+        <% for(let list of allListings){%>
+            <div class="card item" data-name = <%=list.title%> style="width: 23rem;">
+              <a class="card-link" href="/listings/<%= list.id %>">
+                <img src="<%= list.image.url %>" class="card-img-top" alt="list image;" style="height: 19rem;">
+                <div class="card-img-overlay"></div>
+                <div class="card-body">
+                  <p class="card-text">
+                   <div class="show"> 
+                   <p> <b><%=list.title%></b>  <br>&#8377;<%=list.price.toLocaleString("en-IN")%>/night 
+                   <i class="tax-info"> &nbsp; + 18% GST</i>
+                  </p>
+               <form action="/listings/<%= list.id %>"> <button  type="button"  class="btn">Show Details
+               </button>
+               </form>
+                  </div>
+                </div>
+                 </a>
+              </div>
+            <% } %>
+    </div>
+
+
+    <script>
+      let taxSwitch = document.getElementById("Displaytax")
+      taxSwitch.addEventListener("click",()=>{
+        let taxInfo = document.getElementsByClassName("tax-info")
+        for(info of taxInfo){
+          if(info.style.display !="inline"){
+            info.style.display = "inline"
+            console.log("taxb")
+          }
+          else{
+            info.style.display = "none"
+            console.log("taxa")
+          }
+        }
+      })
+
+      // Select all elements with class "item"
+      const items = document.querySelectorAll('.item');
+
+items.forEach(item => {
+    // Hover in: increase size
+    item.addEventListener('mouseenter', () => {
+        gsap.to(item, { scale: 1.1, duration: 0.2 });
+    });
+
+    // Hover out: reset size
+    item.addEventListener('mouseleave', () => {
+        gsap.to(item, { scale: 1, duration: 0.2 });
+    });
+});
+
+
+// Select the search bar and card elements
+const searchBar = document.querySelector('.search-bar');
+        const cards = document.querySelectorAll('.card');
+
+        // Add event listener for input on the search bar
+        searchBar.addEventListener('input', (e) => {
+            const searchText = e.target.value.toLowerCase();
+
+            cards.forEach(card => {
+                // Get the data-name attribute and check if it includes the search text
+                const cardName = card.getAttribute('data-name').toLowerCase();
+                
+                // Show or hide cards based on the search
+                if (cardName.includes(searchText)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>

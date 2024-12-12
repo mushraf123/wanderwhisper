@@ -1,0 +1,35 @@
+
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass fa-spin" style="color: #fcfcfc;"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav">
+            <div class="form-check form-switch" id="switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <label id="mode"  for=""></label>
+            </div>
+            <a class="nav-link rolling-text" aria-current="page" href="/listings">Explore</a>
+          </div>
+          <div class="searchbar ms-auto">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2 search search-box search-bar" type="search" placeholder="Search Destination" aria-label="Search" id="search-input" " onkeyup="searchItems()">
+              <button class="btn sb" type="submit"><i class="fa-solid fa-magnifying-glass mag"></i>&nbsp;Search</button>
+            </form>
+          </div>
+          <div class="navbar-nav ms-auto ">
+            <a class="nav-link rolling-text" href="/listings/new">Airbnb your home</a>
+            <% if (!curuser) { %>
+            <a class="nav-link logina" href="/login"><b>Login</b></a> 
+            <a class="nav-link logina" aria-current="page" href="/signup"><b>SignUp</b></a>
+            <% } %>
+            <% if (curuser) { %>
+              <a class="nav-link" href="/logout"><b>Logout</b></a>               
+            <% } %>
+          </div> 
+        </div>
+      </div>
+  </nav>
+
